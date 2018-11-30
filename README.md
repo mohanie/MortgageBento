@@ -1,6 +1,7 @@
 # MortgageBento
 
 Consumer Complaints Classifier
+All Complaints used in this project are sourced from the <a href="https://www.consumerfinance.gov/data-research/consumer-complaints/search/?from=0&searchField=all&searchText=&size=25&sort=created_date_desc">Consumer Complaint Database</a>
 
 
 ## Flow
