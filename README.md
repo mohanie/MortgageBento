@@ -112,7 +112,7 @@ $ cd MortgageBento
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
 * Under `Notebook file` Browse to your notebook file
-* Under `Select runtime` Select the **Spark services**created earlier.
+* Under `Select runtime` Select the **Spark services** created earlier.
 ![](https://github.com/mohanie/MortgageBento/blob/master/images/SparkServices.png?raw=true)
 * Click the `Create` button.
 
@@ -128,7 +128,7 @@ $ cd MortgageBento
 
 ### 7. Configure AI OpenScale
 
-**Note** : Before configuring AIOS ensure you can created a Model to monitor using the Notebook imported above.
+**Note** : Before configuring AIOS ensure you have created a Model to monitor using the Notebook imported above.
 
 * Create an AI OpenScale Service
 ![](https://github.com/mohanie/MortgageBento/blob/master/images/AIOS_Tile.png?raw=true)
@@ -197,7 +197,7 @@ $ cd MortgageBento
 * In `Configure performance monitoring`
 ![](https://github.com/mohanie/MortgageBento/blob/master/images/ConfigMonitoring.png?raw=true)
 
-* Set `Spark Service or Environment` to you Spark service
+* Set `Spark Service or Environment` to your Spark service
 * Set `Metric details` to accuracy with a threshold of 60
 * Set `Feedback data connection` to your IBM Db2 Warehouse on Cloud
 ![](https://github.com/mohanie/MortgageBento/blob/master/images/NewConnection.png?raw=true)
@@ -205,7 +205,7 @@ $ cd MortgageBento
 * Click `Create`
 ![](https://github.com/mohanie/MortgageBento/blob/master/images/Create.png?raw=true)
 
-* Set `Select feedback data reference` to IBM Db2 Warehouse Schema
+* Set `Select feedback data reference` to a IBM Db2 Warehouse Schema
 ![](https://github.com/mohanie/MortgageBento/blob/master/images/Schema.png?raw=true)
 
 * Enter a table name for your Feedback data.
@@ -213,6 +213,8 @@ $ cd MortgageBento
 
 * Set `Record count required for re-evaluation` to 10
 * Select `Save`
+
+* After configuring Performance Monitoring add the Feedback data.
 
 * Select `Add feedback data` and load the sample feedback sample CSV file.[MortgageFeedback](https://github.com/mohanie/MortgageBento/blob/master/data/MortgageFeedback.csv)
 ![](https://github.com/mohanie/MortgageBento/blob/master/images/FeedbackData.png?raw=true)
