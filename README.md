@@ -112,7 +112,8 @@ $ cd MortgageBento
 * Enter a name for the notebook.
 * Optionally, enter a description for the notebook.
 * Under `Notebook file` Browse to your notebook file
-* Under `Select runtime` Select the Spark services created earlier.
+* Under `Select runtime` Select the **Spark services**created earlier.
+![](https://github.com/mohanie/MortgageBento/blob/master/images/SparkServices.png?raw=true)
 * Click the `Create` button.
 
 
@@ -127,49 +128,57 @@ $ cd MortgageBento
 
 ### 7. Configure AI OpenScale
 
+**Note** : Before configuring AIOS ensure you can created a Model to monitor using the Notebook imported above.
+
 * Create an AI OpenScale Service
 ![](https://github.com/mohanie/MortgageBento/blob/master/images/AIOS_Tile.png?raw=true)
 
 * Launch the AI OpenScale Service
 ![](https://github.com/mohanie/MortgageBento/blob/master/images/LaunchAIOS.png?raw=true)
 
-* Select a `Compose for PostgreSQL` instance.
-![](https://github.com/mohanie/MortgageBento/blob/master/images/gs-set-lite-db.png?raw=true)
+* Select a `Begin` to get started.
 
-* Select a `Watson Machine Learning` service.
-![](https://github.com/mohanie/MortgageBento/blob/master/images/gs-set-wml.png?raw=true)
+* Select a your Watson Machine Learning instance.
+![](https://github.com/mohanie/MortgageBento/blob/master/images/WMLServices.png?raw=true)
 
-### 8. Connect AI OpenScale to your machine learning model
-
-* Launch the AI OpenScale Service
-![](https://github.com/mohanie/MortgageBento/blob/master/images/LaunchAIOS.png?raw=true)
-
-* Select the `Configure` icon to add a new machine learning model.
-* Select `Edit`
-* Select `Next`
-* Select a `Watson Machine Learning` service.
-* Select `Next`
 * Select you machine learning model from the list displayed.
 ![](https://github.com/mohanie/MortgageBento/blob/master/images/gs-set-deploy0.png?raw=true)
 
-* Select `Next`
-* Select `Save`
+* Select a `Use the free Lite plan database` option.
+![](https://github.com/mohanie/MortgageBento/blob/master/images/gs-set-lite-db.png?raw=true)
+
+* Review summary and select `Save`.
+
 * Select `Yes` on confirmation message.
-* Select `Continue with Configuration` on Success message.
-* Select your model to configure.
-* Select `Begin`
+
+* Select `Exit to Dashboard`
+
+### 8. Connect AI OpenScale to your machine learning model
+
+* Select a Model monitor
+![](https://github.com/mohanie/MortgageBento/blob/master/images/monitor.png?raw=true)
+
+* Select `Configure accuracy`
+![](https://github.com/mohanie/MortgageBento/blob/master/images/ConfigAccuracy.png?raw=true)
+
 * Select `Accuracy`
 ![](https://github.com/mohanie/MortgageBento/blob/master/images/Accuracy.png?raw=true)
 
-* Select `Begin`
-* Select `Next`
 * Select `Multi-class classification` for Algorithm type.
+![](https://github.com/mohanie/MortgageBento/blob/master/images/MultiClass.png?raw=true)
+
 * Select `Next`
 * Set accuracy threshold to 60%
+![](https://github.com/mohanie/MortgageBento/blob/master/images/Threshold.png?raw=true)
+
 * Select `Next`
 * Set minimum sample size to 10
+![](https://github.com/mohanie/MortgageBento/blob/master/images/Minsize.png?raw=true)
+
 * Select `Next`
 * Set maximum sample size to 10
+![](https://github.com/mohanie/MortgageBento/blob/master/images/Maxsize.png?raw=true)
+
 * Select `Next`
 * Review the summary data and cick `Save`
 ![](https://github.com/mohanie/MortgageBento/blob/master/images/gs-setup-summary4.png?raw=true)
@@ -190,8 +199,17 @@ $ cd MortgageBento
 
 * Set `Spark Service or Environment` to you Spark service
 * Set `Metric details` to accuracy with a threshold of 60
-* Set `Feedback data connection` to you PostgreSQL Feedback table. `Feedback_<Model_ID>`
-![](https://github.com/mohanie/MortgageBento/blob/master/images/ModelID.png?raw=true)
+* Set `Feedback data connection` to your IBM Db2 Warehouse on Cloud
+![](https://github.com/mohanie/MortgageBento/blob/master/images/NewConnection.png?raw=true)
+
+* Click `Create`
+![](https://github.com/mohanie/MortgageBento/blob/master/images/Create.png?raw=true)
+
+* Set `Select feedback data reference` to IBM Db2 Warehouse Schema
+![](https://github.com/mohanie/MortgageBento/blob/master/images/Schema.png?raw=true)
+
+* Enter a table name for your Feedback data.
+![](https://github.com/mohanie/MortgageBento/blob/master/images/FeedbackTable.png?raw=true)
 
 * Set `Record count required for re-evaluation` to 10
 * Select `Save`
